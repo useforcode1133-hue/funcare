@@ -1,0 +1,565 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-width: 320px;
+  font-family: 'Poppins', sans-serif;
+  background: #FFF7E6;
+  color: #333333;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+img,
+svg {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.funcare-header {
+  width: 100%;
+  background: #FFF7E6;
+  position: relative;
+  z-index: 1000;
+}
+
+/* =========================
+   TOPBAR
+========================= */
+
+.topbar {
+  width: 100%;
+  background: #101B5A;
+  color: #ffffff;
+  padding: 10px 0;
+}
+
+.topbar-inner {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.topbar-social {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-icons a {
+  width: 25px;
+  height: 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.social-icons svg {
+  width: 15px;
+  height: 15px;
+}
+
+.social-icons a:hover {
+  color: #FFC928;
+  transform: translateY(-2px);
+}
+
+/* Topbar Center Message */
+
+.topbar-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+}
+
+.topbar-message svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Topbar Phone */
+
+.topbar-phone {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+
+  transition: color 0.3s ease;
+}
+
+.topbar-phone svg {
+  width: 17px;
+  height: 17px;
+}
+
+.topbar-phone:hover {
+  color: #FFC928;
+}
+
+/* =========================
+   NAVBAR CONTAINER
+========================= */
+
+.navbar-container {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.main-navbar {
+  width: 100%;
+  min-height: 100px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.funcare-logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.logo-svg {
+  width: 160px;
+  height: 52px;
+  overflow: visible;
+}
+
+/* =========================
+   NAVIGATION MENU
+========================= */
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.nav-link {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: #101B5A;
+
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.nav-active {
+  color: #20B5E8;
+}
+
+/* Underline Hover Effect */
+
+.nav-link::after {
+  content: '';
+
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+
+  width: 0;
+  height: 2px;
+
+  background: #FF941F;
+  border-radius: 10px;
+
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.nav-active::after {
+  width: 100%;
+}
+
+/* Dropdown Chevron */
+
+.nav-chevron {
+  width: 12px;
+  height: 12px;
+  transition: transform 0.3s ease;
+}
+
+.nav-link:hover .nav-chevron {
+  transform: rotate(180deg);
+}
+
+/* =========================
+   BOOK A TOUR BUTTON
+========================= */
+
+.tour-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  padding: 14px 23px;
+
+  background: #FF941F;
+  color: #ffffff;
+
+  border-radius: 50px;
+
+  font-family: 'Fredoka', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  white-space: nowrap;
+
+  box-shadow: 0 5px 15px rgba(255, 148, 31, 0.18);
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.tour-button svg {
+  width: 18px;
+  height: 18px;
+}
+
+.tour-button:hover {
+  background: #20B5E8;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(32, 181, 232, 0.25);
+}
+
+/* =========================
+   MOBILE MENU BUTTON
+========================= */
+
+.menu-toggle {
+  display: none;
+
+  width: 44px;
+  height: 44px;
+
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 12px;
+
+  background: #ffffff;
+  color: #101B5A;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.menu-toggle:hover {
+  background: #20B5E8;
+  color: #ffffff;
+}
+
+/* =========================
+   TABLET RESPONSIVE
+========================= */
+
+@media (max-width: 1100px) {
+  .topbar-inner {
+    padding: 0 25px;
+  }
+
+  .navbar-container {
+    padding: 0 25px;
+  }
+
+  .main-navbar {
+    gap: 20px;
+  }
+
+  .nav-menu {
+    gap: 18px;
+  }
+
+  .nav-link {
+    font-size: 12px;
+  }
+
+  .tour-button {
+    padding: 12px 18px;
+    font-size: 15px;
+  }
+
+  .logo-svg {
+    width: 140px;
+  }
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 850px) {
+  .topbar-inner {
+    padding: 0 20px;
+  }
+
+  .topbar-message {
+    display: none;
+  }
+
+  .navbar-container {
+    padding: 0 20px;
+  }
+
+  .main-navbar {
+    min-height: 82px;
+    gap: 15px;
+  }
+
+  .logo-svg {
+    width: 145px;
+  }
+
+  .menu-toggle {
+    display: flex;
+    flex-shrink: 0;
+  }
+
+  .tour-button {
+    margin-left: auto;
+  }
+
+  /* Mobile Navigation Dropdown */
+
+  .nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 20px;
+    right: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+
+    padding: 12px;
+
+    background: #ffffff;
+    border: 1px solid rgba(16, 27, 90, 0.08);
+    border-radius: 20px;
+
+    box-shadow: 0 15px 35px rgba(16, 27, 90, 0.12);
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+
+    transition: all 0.3s ease;
+  }
+
+  .nav-menu.menu-open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .nav-link {
+    width: 100%;
+    padding: 14px 16px;
+
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 14px;
+    border-radius: 12px;
+  }
+
+  .nav-link:hover,
+  .nav-link.nav-active {
+    background: #FFF7E6;
+    color: #20B5E8;
+  }
+
+  .nav-link::after {
+    display: none;
+  }
+
+  .nav-chevron {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+  .topbar {
+    padding: 9px 0;
+  }
+
+  .topbar-inner {
+    padding: 0 16px;
+  }
+
+  .topbar-social {
+    gap: 8px;
+    font-size: 10px;
+  }
+
+  .social-icons {
+    gap: 7px;
+  }
+
+  .social-icons a {
+    width: 22px;
+    height: 22px;
+  }
+
+  .social-icons svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .topbar-phone {
+    gap: 6px;
+    font-size: 10px;
+  }
+
+  .topbar-phone svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .navbar-container {
+    padding: 0 16px;
+  }
+
+  .main-navbar {
+    min-height: 75px;
+    gap: 10px;
+  }
+
+  .logo-svg {
+    width: 125px;
+    height: auto;
+  }
+
+  .tour-button {
+    padding: 10px 14px;
+    gap: 7px;
+    font-size: 13px;
+  }
+
+  .tour-button svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .menu-toggle {
+    width: 38px;
+    height: 38px;
+  }
+
+  .menu-toggle svg {
+    width: 21px;
+    height: 21px;
+  }
+
+  .nav-menu {
+    left: 16px;
+    right: 16px;
+  }
+}
+
+/* =========================
+   EXTRA SMALL MOBILE
+========================= */
+
+@media (max-width: 360px) {
+  .logo-svg {
+    width: 108px;
+  }
+
+  .tour-button {
+    padding: 9px 11px;
+    font-size: 12px;
+  }
+
+  .main-navbar {
+    gap: 8px;
+  }
+
+  .topbar-phone span {
+    font-size: 9px;
+  }
+}
